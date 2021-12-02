@@ -8,18 +8,17 @@ public class flightDetails {
 		private String departure;
 		private String destination;
 		private int price;
-		public flightDetails(String flightId, String departure, String destination, int price) {
+		private String date;
+		public flightDetails(String flightId, String departure, String destination, int price, String date) {
 			super();
 			this.flightId = flightId;
 			this.departure = departure;
 			this.destination = destination;
 			this.price = price;
+			this.date= date;
 		}
-		@Override
-		public String toString() {
-			return "FlightDetails [FlightId=" + flightId + ", departure=" + departure + ", destination=" + destination
-					+ ", price=" + price + "]";
-		}
+		
+		
 		public String getFlightId() {
 			return flightId;
 		}
@@ -32,4 +31,16 @@ public class flightDetails {
 		public int getPrice() {
 			return price;
 		}
+		public String getDate() {
+			return date;
+		}
+
+
+		@Override
+		public String toString() {
+			return "flightDetails [flightId=" + flightId + ", departure=" + departure + ", destination=" + destination
+					+ ", price=" + price + ", date=" + date + "]";
+		}
+		
+		
 }
